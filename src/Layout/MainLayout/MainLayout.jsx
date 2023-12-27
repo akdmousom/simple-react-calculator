@@ -8,7 +8,7 @@ const MainLayout = () => {
             
             <div className="
                     
-                    
+                    rounded-lg
                     min-h-96 
                     w-80
                     bg-white 
