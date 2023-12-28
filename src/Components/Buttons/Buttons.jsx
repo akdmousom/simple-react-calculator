@@ -1,18 +1,71 @@
 import { useEffect, useState } from "react";
 
-const Buttons = ({ number, special, num1, setNum1, sign }) => {
+const Buttons = ({ number, special, num1, setNum1, sign, setNumberOne, numberOne, setOperand, operand, setResult }) => {
 
-    const [clickNum, setClickNum] = useState();
+    const [isCancel, setCancle] = useState(false);
+
+
+
 
 
 
 
     const handleButtonClick = (clickNumber) => {
 
-        setClickNum(clickNumber)
 
-        setNum1([...num1, clickNumber])
-        
+
+        if (typeof (clickNumber) === "number") {
+
+            setNum1([...num1, clickNumber])
+
+
+
+        } else {
+
+
+
+            if (typeof (clickNumber) !== "number") {
+
+
+                if (clickNumber == '/' ) {
+
+                    setNumberOne([...num1])
+                    setNum1([])
+                    const opa = clickNumber
+                    setOperand(opa)
+                }
+
+                if (clickNumber == '=') {
+
+                    if (operand == '/') {
+                       
+                        const numberTwo = num1.join("")
+                        console.log(numberTwo);
+                        const numbersIsOne = numberOne.join("")
+                        console.log(numbersIsOne);
+                        
+                        const result = parseFloat(numbersIsOne) / parseFloat(numberTwo);
+                        console.log(result);
+                        setResult(result)
+                        setNum1([])
+                        setNumberOne([])
+
+                        
+                    }
+                    
+                }
+
+
+
+            }
+
+
+
+        }
+
+
+
+
     }
 
 
