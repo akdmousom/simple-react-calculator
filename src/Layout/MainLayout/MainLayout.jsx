@@ -54,7 +54,7 @@ const MainLayout = () => {
                 <Buttons setNumberOne={setNumberOne} setResult={setResult} setOperand={setOperand} operand={operand} numberOne={numberOne} num1 = {num1} setNum1 ={setNum1} number={'/'}/>
                 <Buttons setNumberOne={setNumberOne} setResult={setResult} setOperand={setOperand} operand={operand} numberOne={numberOne} num1 = {num1} setNum1 ={setNum1} number={'='}/>
                 <Buttons setNumberOne={setNumberOne} setResult={setResult} setOperand={setOperand} operand={operand} numberOne={numberOne} num1 = {num1} setNum1 ={setNum1} number={'C'}/>
-            </div> numberOne={numberOne}
+            </div>
 
 
             </div>
