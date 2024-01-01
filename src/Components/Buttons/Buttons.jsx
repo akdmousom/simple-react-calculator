@@ -49,6 +49,14 @@ const Buttons = ({ number, special, num1, setNum1, sign, setNumberOne, numberOne
                         const opa = clickNumber
                         setOperand(opa)
                     }
+
+                    if (clickNumber == '+' ) {
+
+                        setNumberOne([...num1])
+                        setNum1([])
+                        const opa = clickNumber
+                        setOperand(opa)
+                    }
                 }
 
                 if (clickNumber == '=') {
@@ -97,7 +105,23 @@ const Buttons = ({ number, special, num1, setNum1, sign, setNumberOne, numberOne
                      
 
                         
+                    } else if (operand == '+') {
+                       
+                        const numberTwo = num1.join("")
+                        console.log(numberTwo);
+                        const numbersIsOne = numberOne.join("")
+                        console.log(numbersIsOne);
+                        
+                        const result = parseFloat(numbersIsOne) + parseFloat(numberTwo);
+                        console.log(result);
+                        setResult(result)
+                        setNum1([])
+                        setNumberOne([])
+                     
+
+                        
                     } 
+                   
                    
                 }
 
